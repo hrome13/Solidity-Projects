@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.14;
+pragma solidity ^0.8.0;
 
 /// @title ERC-721 Non-Fungible Token Standard
 /// @dev See https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md
@@ -122,6 +122,6 @@ interface ERC721TokenReceiver {
     /// @param _data Additional data with no specified format
     /// @return `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`
     /// unless throwing
-    function onERC721Received(address _operator, address _from, uint256 _tokenId, bytes memory _data) external returns(bytes4);
+    function onERC721Received(address _operator, address _from, uint256 _tokenId, bytes calldata _data) external returns(bytes4);
     }
     
